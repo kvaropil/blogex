@@ -1,0 +1,18 @@
+{
+  "name": "blogex",
+  "version": "1.0.0",
+  "description": "blog-app",
+  "main": "index.js",
+  "repository": "https://github.com/kvaropil/blogex",
+  "author": "Roman Kvapil",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "scripts": {
+    "client": "cd client && yarn dev",
+    "server": "cd server && yarn start",
+    "start": "concurrently --kill-others \"yarn client\" \"yarn server\""
+  }
+}
