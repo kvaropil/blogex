@@ -8,13 +8,19 @@ interface IPost {
   id: number;
   title: string;
   content: string;
+  createdAt?: Date;
 }
 
 app.use(cors());
 
 app.get('/api/v1/posts', (req: Request, res: Response<IPost[]>) => {
   res.json([
-    { id: 1, title: 'First post', content: 'Hello, this is my first post' },
+    {
+      id: 1,
+      title: 'First post',
+      content: 'Hello, this is my first post',
+      createdAt: new Date(Date.now()),
+    },
     { id: 2, title: 'Second post', content: 'Here is some more content' },
   ]);
 });

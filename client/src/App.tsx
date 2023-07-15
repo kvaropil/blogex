@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import axios, { AxiosResponse, AxiosError } from 'axios';
+
+import dayjs from 'dayjs';
+import localizedFormat from 'dayjs/plugin/localizedFormat';
+dayjs.extend(localizedFormat);
+
 import styles from './App.module.scss';
 
 interface Post {
   id: number;
   title: string;
   content: string;
+  createdAt: Date;
 }
 
 const App: React.FC = () => {
@@ -34,6 +40,7 @@ const App: React.FC = () => {
         <div key={post.id} className={styles.post}>
           <h2>{post.title}</h2>
           <p>{post.content}</p>
+          <p>{dayjs(post.createdAt).format('L LT')}</p>
         </div>
       ))}
     </div>
