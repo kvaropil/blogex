@@ -27,6 +27,24 @@ app.get('/api/v1/posts', (req: Request, res: Response<IPost[]>) => {
       content: 'Here is some more content',
       createdAt: new Date(Date.now()),
     },
+    {
+      id: 3,
+      title: 'Third post',
+      content: 'Here is some more content',
+      createdAt: new Date(Date.now()),
+    },
+    {
+      id: 4,
+      title: 'Fourth post',
+      content: 'Here is some more content',
+      createdAt: new Date(Date.now()),
+    },
+    {
+      id: 5,
+      title: 'Fifth post',
+      content: 'Here is some more content',
+      createdAt: new Date(Date.now()),
+    },
   ]);
 });
 
