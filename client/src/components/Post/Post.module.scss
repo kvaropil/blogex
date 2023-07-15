@@ -1,0 +1,21 @@
+.post {
+  background-color: #282828;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 60%;
+  min-width: 25pc;
+  color: #b3b3b3;
+  border: 1px solid #535353;
+
+  h2 {
+    font-size: 2em;
+    color: #1db954;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+}
