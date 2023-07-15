@@ -29,7 +29,7 @@ const App: React.FC = () => {
 
   return (
     <div className={styles.app}>
-      <h1>Blogex</h1>
+      <h1 className={styles.title}>Blogex</h1>
       {posts.map((post) => (
         <div key={post.id} className={styles.post}>
           <h2>{post.title}</h2>
